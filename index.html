@@ -1,411 +1,308 @@
 <!doctype html>
 <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>reveal.js - The HTML Presentation Framework</title>
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
 
-	<head>
-		<meta charset="utf-8">
+      <section>
+        <p>輪講 〜 マイクロインタラクション 3章</p>
+        <h1>ルール</h1>
+      </section>
+      <section style="text-align: left;">
+        <h3>ルールとは</h3>
+        <p>
+          規則（きそく、ルールとも言う）とは、人の従うべき準則であり、主に文章によって規定されたものをいう。なお、規則に定められたものを原則（げんそく）、または本則（ほんそく）とも呼ばれ、規則に規定されていない事項については例外（れいがい）と称される。
+        </p>
+        <p>
+          個別の名称にはさまざまなものがあり、規則のほかに規程、規定、規約、基準などがある。
+        </p>
+        <p>
+          また、ある物事と別の物事との間に一定の関係が見られるとき、その関係を規則あるいは法則と言う。
+        </p>
+        <p>
+          引用: Wikipedia
+        </p>
+      </section>
+      <section style="text-align: left;">
+        <h3>ルール化の目的</h3>
+        <p>
+          ルールを使って、マイクロインタラクションの機能を専門家でなくともわかるように説明するモデルを作る。<br>
+          ルールによってどのような順番で何ができる、何ができないかが決まる（決める）。
+        </p>
+        <p>
+          今回、作り方、大事なことを中心に解説します。
+        </p>
+      </section>
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+      <section data-background="#E3FCE6">
+        <h2>1. ルールの作成</h2>
+      </section>
+      <section data-background="#E3FCE6">
+        <h2>まず…</h2>
+      </section>
+      <section style="text-align: left;" data-background="#E3FCE6">
+        <h3>
+          マイクロインタラクションに<br>
+          おけるルールとは
+        </h3>
+        <p>
+          マイクロインタラクションの使い方を決める一連の規則。
+        </p>
+      </section>
+      <section data-background="#E3FCE6">
+        <h2>意味わからん</h2>
+      </section>
+      <section style="text-align: left;" data-background="#E3FCE6">
+        <h2>例</h2>
+      </section>
+      <section style="text-align: left;" data-background="#E3FCE6">
+        <h3>ルール作りに役立てよう</h3>
+        <p>
+          ルールを作るのに最も重要な要素は<strong>[目的]</strong>です。
+        </p>
+        <p>
+          例えばログインのマイクロインタラクションの目的はユーザーにパスワードを入力させることではなく、ログインさせ、システムに入らせることです。
+        </p>
+      </section>
+      <section style="text-align: left;" data-background="#E3FCE6">
+        <h3>目的</h3>
+        <p>
+          目的は、理解可能かつ達成可能でなければなりません。なぜそれを行っているの かがわかり、それができるとわかっていなければならないのです。<br>
+          単なる通過点 を定義するのではなく、最終的な状態です。
+        </p>
+        <p>
+          焦点が(途中経 過ではなく)目的に絞られていればいるほど、そのマイクロインタラクションはよ りよいものになるはずです。
+        </p>
+        <p>
+          ルールの原動力は<strong>[目的]</strong>です。
+        </p>
+      </section>
+      <section style="text-align: left;" data-background="#E3FCE6">
+        <h3>大事なこと</h3>
+        <p>
+          ルールはユーザーの行動を制限することになりますが、<br>
+          <strong>ルールをルールと感じさせない</strong>ことが重要です。
+        </p>
+        <p>
+          目指すべきは自然で万事うまくいっているという感覚で、マイクロインタラクションの「やりとり」を通じてユーザーをそれとなく導きましょう。
+        </p>
+        <img src="https://www.bizreach.co.jp/img/recruit/engineer-designer/interview/10/profile.jpg" alt="" class="fragment">
+      </section>
+      <section style="text-align: left;" data-background="#E3FCE6">
+        <h3>画面と状態</h3>
+        <p>
+          特に頻繁には登場しない、ま たは一度きりの明確で他とは区別されたステップに関しては、<br>
+          ルールの各ステップをそのつど画面に反映させるような UI、つまり各マイクロ インタラクションをウィザードのひとつの画面にするのが有効です。
+        </p>
+      </section>
+      <section data-background="#E3FCE6">
+        <h2>例えば…</h2>
+      </section>
+      <section style="text-align: left;" data-background="#E3FCE6">
+        <h3>ユーザーが操作できるオブジェクト</h3>
+        <p>
+          ユーザーが操作できるオブジェクトには、<br>
+          少なくとも3つの状態があります。
+        </p>
+        <ol>
+          <li>デフォルトの状態（<strong>待ち</strong>）</li>
+          <li>ユーザーが操作中の状態（<strong>アクティブ</strong>）</li>
+          <li>ユーザーが操作を終えた状態（<strong>更新</strong> or デフォルト）</li>
+        </ol>
+        <p>
+          状態を意識しながらマイクロインタラクションをデザインしましょう。
+        </p>
+        <img src="https://www.bizreach.co.jp/img/recruit/engineer-designer/interview/10/profile.jpg" alt="" class="fragment">
+      </section>
+      <section data-background="#E3FCE6">
+        <h2>制約</h2>
+      </section>
+      <section style="text-align: left;" data-background="#E3FCE6">
+        <p>
+          ルールには制約が反映されなければなりません。
+        </p>
+        <ul>
+          <li>ビジネス上の制約</li>
+          <li>コンテキストからくる制約</li>
+          <li>技術的な制約</li>
+        </ul>
+        <p>
+          以上の制約を上手く処理しましょう。
+        </p>
+        <img src="https://www.bizreach.co.jp/img/recruit/engineer-designer/interview/10/profile.jpg" alt="" class="fragment">
+      </section>
+      <section data-background="#E3FCE6">
+        <h2>ゼロから始めない</h2>
+      </section>
+      <section style="text-align: left;" data-background="#E3FCE6">
+        <ul>
+          <li>ユーザー</li>
+          <li>プラットフォーム</li>
+          <li>環境</li>
+        </ul>
+        <p>
+          以上の事柄について、すでに知っていることを利用してマイクロインタラクションを改善しましょう。
+        </p>
+      </section>
+      <section data-background="#E3FCE6">
+        <h2>例えば…</h2>
+      </section>
+      <section style="text-align: left;" data-background="#E3FCE6">
+        <h3>複雑さを軽減する</h3>
+        <p>
+          すべての作業には、固有の複雑さがあり、簡略化することはできません。<br>
+          ですが、複雑さを隠蔽することはできるため、
+        </p>
+        <ul>
+          <li>ユーザーに細かな作業を許可するか</li>
+          <li>ユーザーの作業を制限して簡略化するか</li>
+        </ul>
+        <p>
+          以上2点を選択する必要が出てきます。<br>
+          マイクロインタラクションにおいては、ユーザーに権限を与えず、<br>
+          マイクロインタラクション側で意思決定をする方向がよいです。
+        </p>
+      </section>
+      <section data-background="#E3FCE6">
+        <h2>しかし…</h2>
+      </section>
+      <section style="text-align: left;" data-background="#E3FCE6">
+        <p>
+          ユーザーの介入が必要な場面や、全面的にユーザーに処理を委ねなければならない場面もあります。<br>
+          そういった場面においても、システムが手助けできることがないかを考えましょう。
+        </p>
+        <p>
+          たとえばメールアドレスの入力はユーザーに一文字ずつ打たせる必要がありますが、間違っていないかなどのエラー表示は手助けとして有効で、
+          間違っていた際にもう一度打ち直すなどの作業が不要になります。
+        </p>
+      </section>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+      <section data-background="#E7E4F9">
+        <h2>選択肢の制限と<br>賢いデフォルト</h2>
+      </section>
+      <section style="text-align: left;" data-background="#E7E4F9">
+        <p>
+          マイクロインタラクションにおいて、ユーザーに与えられる選択肢が多ければそれだけ必要なルールが増えますが、
+          一般的にルールが少ない方がわかりやすく、優れたものになります。
+        </p>
+        <p>
+          ルールを減らすために選択肢は絞り、その代わりに賢いデフォルトを提示するのが良いです。
+        </p>
+      </section>
+      <section data-background="#E7E4F9">
+        <h2>どうするか</h2>
+      </section>
+      <section style="text-align: left;" data-background="#E7E4F9">
+        <p>
+          マイクロインタラクションでは、<strong>ユーザーが次に取りそうな行動を目立つように表示する</strong>（または自動的に行う）のが良いです。
+        </p>
+      </section>
+      <section data-background="#E7E4F9">
+        <h2>例</h2>
+      </section>
+      <section data-background="#E7E4F9">
+        <h2>マイクロコピー</h2>
+      </section>
+      <section style="text-align: left;" data-background="#E7E4F9">
+        <p>
+          ルールを理解する上で<strong>マイクロコピー</strong>（ラベルや指示などのごく短いテキスト）は欠かせません。<br>
+          マイクロインタラクションがマイクロコピーに集約されている場合もあります。例えば「いいね!」ボタンなどです。
+        </p>
+        <p>
+          基本的に、マイクロインタラクション自体に「文章がないと理解できないのか」は考慮する必要があります。<br>
+          ラベルで充分理解できるのであれば、ボタンに書かれたラベルのみとして、文章を書くのは避けましょう。<br>
+          言葉の選定は簡潔にすることも重要です。
+        </p>
+      </section>
+      <section style="text-align: left;" data-background="#E7E4F9">
+        <p>
+          それぞれの操作対象の状態を定義し、時間経過ややりとりによって、状態がどのように変化するかを検討しましょう。<br>
+          変化した状態をマイクロコピーによって表現することも重要です。
+        </p>
+      </section>
+      <section style="text-align: left;" data-background="#E7E4F9">
+        <h3>エラー防止</h3>
+        <p>
+          マイクロコピーを利用してエラー防止の手助けができます。
+        </p>
+        <p>
+          例えば、メールアドレス入力のテキストボックスにplaceholderとしてフォーマットを明示しておく、テキストボックスの付近にラベルを置いておく、エラー時に内容を明示して画面遷移後の無駄な戻り作業を減らすなどです。
+        </p>
+      </section>
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <section data-background="#F7E4E9">
+        <h2>アルゴリズム</h2>
+      </section>
+      <section style="text-align: left;" data-background="#F7E4E9">
+        <p>
+          アルゴリズムは数学、コンピューティング、言語学、あるいは関連する分野において、問題を解くための手順を定式化したものを言います。<br>
+          マイクロインタラクションのルールもアルゴリズム的に検討することができます。
+        </p>
+      </section>
+      <section data-background="#F7E4E9">
+        <h2>例えば…</h2>
+      </section>
+      <section style="text-align: left;" data-background="#F7E4E9">
+        <p>
+          検索エンジンで、テキストボックスに文字を入力すれば検索結果がリアルタイムに変化するUIでは、<br>
+          「○○したらどうなる」（<strong>処理順序</strong>と<strong>分岐</strong>）という考え方であったり、
+          「文字を打つごとにどうなる」という<strong>繰り返し</strong>の処理であったり、<strong>変数</strong>を用いた動き、見た目の一元管理といった、
+          アルゴリズム的な発想が組み込まれています。
+        </p>
+        <p>
+          デザイナーも、デザインの時点でこういったアルゴリズムを考慮する必要があります。
+        </p>
+      </section>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+      <section>
+        <h2>まとめ</h2>
+      </section>
+      <section>
+        <h2>話し合い</h2>
+      </section>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+    </div>
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
-
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
-
-			</div>
-
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-
-		</script>
-
-	</body>
+      // Optional reveal.js plugins
+      dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/notes/notes.js', async: true }
+      ]
+    });
+  </script>
+</body>
 </html>
