@@ -18,260 +18,107 @@
     <div class="slides">
 
       <section>
-        <p>輪講 〜 マイクロインタラクション 3章</p>
-        <h1>ルール</h1>
-      </section>
-      <section style="text-align: left;">
-        <h3>ルールとは</h3>
-        <p>
-          規則（きそく、ルールとも言う）とは、人の従うべき準則であり、主に文章によって規定されたものをいう。なお、規則に定められたものを原則（げんそく）、または本則（ほんそく）とも呼ばれ、規則に規定されていない事項については例外（れいがい）と称される。
-        </p>
-        <p>
-          個別の名称にはさまざまなものがあり、規則のほかに規程、規定、規約、基準などがある。
-        </p>
-        <p>
-          また、ある物事と別の物事との間に一定の関係が見られるとき、その関係を規則あるいは法則と言う。
-        </p>
-        <p>
-          引用: Wikipedia
-        </p>
-      </section>
-      <section style="text-align: left;">
-        <h3>ルール化の目的</h3>
-        <p>
-          ルールを使って、マイクロインタラクションの機能を専門家でなくともわかるように説明するモデルを作る。<br>
-          ルールによってどのような順番で何ができる、何ができないかが決まる（決める）。
-        </p>
-        <p>
-          今回、作り方、大事なことを中心に解説します。
-        </p>
+        <h2>
+          Vimを使った超高速<br>
+          HTML/CSSコーディング
+        </h2>
+        <p>2015.07.14 BizReach 小枝はだか</p>
       </section>
 
-      <section data-background="#E3FCE6">
-        <h2>1. ルールの作成</h2>
+      <section>
+        <h3>自己紹介</h3>
+        <table>
+          <tr class="fragment">
+            <th>名前</th>
+            <td>小枝優駿</td>
+          </tr>
+          <tr class="fragment">
+            <th>所属</th>
+            <td>株式会社ビズリーチ スタンバイ事業部</td>
+          </tr>
+          <tr class="fragment">
+            <th>職業</th>
+            <td>フロントエンドエンジニア</td>
+          </tr>
+          <tr class="fragment">
+            <th>最近の悩み</th>
+            <td>体脂肪率（30%超え）</td>
+          </tr>
+        </table>
       </section>
-      <section data-background="#E3FCE6">
-        <h2>まず…</h2>
-      </section>
-      <section style="text-align: left;" data-background="#E3FCE6">
-        <h3>
-          マイクロインタラクションに<br>
-          おけるルールとは
-        </h3>
-        <p>
-          マイクロインタラクションの使い方を決める一連の規則。
-        </p>
-      </section>
-      <section data-background="#E3FCE6">
-        <h2>意味わからん</h2>
-      </section>
-      <section style="text-align: left;" data-background="#E3FCE6">
-        <h2>例</h2>
-      </section>
-      <section style="text-align: left;" data-background="#E3FCE6">
-        <h3>ルール作りに役立てよう</h3>
-        <p>
-          ルールを作るのに最も重要な要素は<strong>[目的]</strong>です。
-        </p>
-        <p>
-          例えばログインのマイクロインタラクションの目的はユーザーにパスワードを入力させることではなく、ログインさせ、システムに入らせることです。
-        </p>
-      </section>
-      <section style="text-align: left;" data-background="#E3FCE6">
-        <h3>目的</h3>
-        <p>
-          目的は、理解可能かつ達成可能でなければなりません。なぜそれを行っているの かがわかり、それができるとわかっていなければならないのです。<br>
-          単なる通過点 を定義するのではなく、最終的な状態です。
-        </p>
-        <p>
-          焦点が(途中経 過ではなく)目的に絞られていればいるほど、そのマイクロインタラクションはよ りよいものになるはずです。
-        </p>
-        <p>
-          ルールの原動力は<strong>[目的]</strong>です。
-        </p>
-      </section>
-      <section style="text-align: left;" data-background="#E3FCE6">
-        <h3>大事なこと</h3>
-        <p>
-          ルールはユーザーの行動を制限することになりますが、<br>
-          <strong>ルールをルールと感じさせない</strong>ことが重要です。
-        </p>
-        <p>
-          目指すべきは自然で万事うまくいっているという感覚で、マイクロインタラクションの「やりとり」を通じてユーザーをそれとなく導きましょう。
-        </p>
-        <img src="https://www.bizreach.co.jp/img/recruit/engineer-designer/interview/10/profile.jpg" alt="" class="fragment">
-      </section>
-      <section style="text-align: left;" data-background="#E3FCE6">
-        <h3>画面と状態</h3>
-        <p>
-          特に頻繁には登場しない、ま たは一度きりの明確で他とは区別されたステップに関しては、<br>
-          ルールの各ステップをそのつど画面に反映させるような UI、つまり各マイクロ インタラクションをウィザードのひとつの画面にするのが有効です。
-        </p>
-      </section>
-      <section data-background="#E3FCE6">
-        <h2>例えば…</h2>
-      </section>
-      <section style="text-align: left;" data-background="#E3FCE6">
-        <h3>ユーザーが操作できるオブジェクト</h3>
-        <p>
-          ユーザーが操作できるオブジェクトには、<br>
-          少なくとも3つの状態があります。
-        </p>
+
+      <section>
+        <h3>今日やりたいこと</h3>
         <ol>
-          <li>デフォルトの状態（<strong>待ち</strong>）</li>
-          <li>ユーザーが操作中の状態（<strong>アクティブ</strong>）</li>
-          <li>ユーザーが操作を終えた状態（<strong>更新</strong> or デフォルト）</li>
+          <li class="fragment">Vimって何？</li>
+          <li class="fragment">Vimってどんだけ速いの？</li>
+          <li class="fragment">小枝って本当に速いの？</li>
+          <li class="fragment">どうしたら速くなるの？</li>
         </ol>
-        <p>
-          状態を意識しながらマイクロインタラクションをデザインしましょう。
-        </p>
-        <img src="https://www.bizreach.co.jp/img/recruit/engineer-designer/interview/10/profile.jpg" alt="" class="fragment">
-      </section>
-      <section data-background="#E3FCE6">
-        <h2>制約</h2>
-      </section>
-      <section style="text-align: left;" data-background="#E3FCE6">
-        <p>
-          ルールには制約が反映されなければなりません。
-        </p>
-        <ul>
-          <li>ビジネス上の制約</li>
-          <li>コンテキストからくる制約</li>
-          <li>技術的な制約</li>
-        </ul>
-        <p>
-          以上の制約を上手く処理しましょう。
-        </p>
-        <img src="https://www.bizreach.co.jp/img/recruit/engineer-designer/interview/10/profile.jpg" alt="" class="fragment">
-      </section>
-      <section data-background="#E3FCE6">
-        <h2>ゼロから始めない</h2>
-      </section>
-      <section style="text-align: left;" data-background="#E3FCE6">
-        <ul>
-          <li>ユーザー</li>
-          <li>プラットフォーム</li>
-          <li>環境</li>
-        </ul>
-        <p>
-          以上の事柄について、すでに知っていることを利用してマイクロインタラクションを改善しましょう。
-        </p>
-      </section>
-      <section data-background="#E3FCE6">
-        <h2>例えば…</h2>
-      </section>
-      <section style="text-align: left;" data-background="#E3FCE6">
-        <h3>複雑さを軽減する</h3>
-        <p>
-          すべての作業には、固有の複雑さがあり、簡略化することはできません。<br>
-          ですが、複雑さを隠蔽することはできるため、
-        </p>
-        <ul>
-          <li>ユーザーに細かな作業を許可するか</li>
-          <li>ユーザーの作業を制限して簡略化するか</li>
-        </ul>
-        <p>
-          以上2点を選択する必要が出てきます。<br>
-          マイクロインタラクションにおいては、ユーザーに権限を与えず、<br>
-          マイクロインタラクション側で意思決定をする方向がよいです。
-        </p>
-      </section>
-      <section data-background="#E3FCE6">
-        <h2>しかし…</h2>
-      </section>
-      <section style="text-align: left;" data-background="#E3FCE6">
-        <p>
-          ユーザーの介入が必要な場面や、全面的にユーザーに処理を委ねなければならない場面もあります。<br>
-          そういった場面においても、システムが手助けできることがないかを考えましょう。
-        </p>
-        <p>
-          たとえばメールアドレスの入力はユーザーに一文字ずつ打たせる必要がありますが、間違っていないかなどのエラー表示は手助けとして有効で、
-          間違っていた際にもう一度打ち直すなどの作業が不要になります。
-        </p>
-      </section>
-
-      <section data-background="#E7E4F9">
-        <h2>選択肢の制限と<br>賢いデフォルト</h2>
-      </section>
-      <section style="text-align: left;" data-background="#E7E4F9">
-        <p>
-          マイクロインタラクションにおいて、ユーザーに与えられる選択肢が多ければそれだけ必要なルールが増えますが、
-          一般的にルールが少ない方がわかりやすく、優れたものになります。
-        </p>
-        <p>
-          ルールを減らすために選択肢は絞り、その代わりに賢いデフォルトを提示するのが良いです。
-        </p>
-      </section>
-      <section data-background="#E7E4F9">
-        <h2>どうするか</h2>
-      </section>
-      <section style="text-align: left;" data-background="#E7E4F9">
-        <p>
-          マイクロインタラクションでは、<strong>ユーザーが次に取りそうな行動を目立つように表示する</strong>（または自動的に行う）のが良いです。
-        </p>
-      </section>
-      <section data-background="#E7E4F9">
-        <h2>例</h2>
-      </section>
-      <section data-background="#E7E4F9">
-        <h2>マイクロコピー</h2>
-      </section>
-      <section style="text-align: left;" data-background="#E7E4F9">
-        <p>
-          ルールを理解する上で<strong>マイクロコピー</strong>（ラベルや指示などのごく短いテキスト）は欠かせません。<br>
-          マイクロインタラクションがマイクロコピーに集約されている場合もあります。例えば「いいね!」ボタンなどです。
-        </p>
-        <p>
-          基本的に、マイクロインタラクション自体に「文章がないと理解できないのか」は考慮する必要があります。<br>
-          ラベルで充分理解できるのであれば、ボタンに書かれたラベルのみとして、文章を書くのは避けましょう。<br>
-          言葉の選定は簡潔にすることも重要です。
-        </p>
-      </section>
-      <section style="text-align: left;" data-background="#E7E4F9">
-        <p>
-          それぞれの操作対象の状態を定義し、時間経過ややりとりによって、状態がどのように変化するかを検討しましょう。<br>
-          変化した状態をマイクロコピーによって表現することも重要です。
-        </p>
-      </section>
-      <section style="text-align: left;" data-background="#E7E4F9">
-        <h3>エラー防止</h3>
-        <p>
-          マイクロコピーを利用してエラー防止の手助けができます。
-        </p>
-        <p>
-          例えば、メールアドレス入力のテキストボックスにplaceholderとしてフォーマットを明示しておく、テキストボックスの付近にラベルを置いておく、エラー時に内容を明示して画面遷移後の無駄な戻り作業を減らすなどです。
-        </p>
-      </section>
-
-      <section data-background="#F7E4E9">
-        <h2>アルゴリズム</h2>
-      </section>
-      <section style="text-align: left;" data-background="#F7E4E9">
-        <p>
-          アルゴリズムは数学、コンピューティング、言語学、あるいは関連する分野において、問題を解くための手順を定式化したものを言います。<br>
-          マイクロインタラクションのルールもアルゴリズム的に検討することができます。
-        </p>
-      </section>
-      <section data-background="#F7E4E9">
-        <h2>例えば…</h2>
-      </section>
-      <section style="text-align: left;" data-background="#F7E4E9">
-        <p>
-          検索エンジンで、テキストボックスに文字を入力すれば検索結果がリアルタイムに変化するUIでは、<br>
-          「○○したらどうなる」（<strong>処理順序</strong>と<strong>分岐</strong>）という考え方であったり、
-          「文字を打つごとにどうなる」という<strong>繰り返し</strong>の処理であったり、<strong>変数</strong>を用いた動き、見た目の一元管理といった、
-          アルゴリズム的な発想が組み込まれています。
-        </p>
-        <p>
-          デザイナーも、デザインの時点でこういったアルゴリズムを考慮する必要があります。
-        </p>
       </section>
 
       <section>
-        <h2>まとめ</h2>
+        <h3>Vimって何？</h3>
+        <ul>
+          <li class="fragment">すごく使いづらいエディタ</li>
+          <li class="fragment">すごく昔からあるエディタ</li>
+          <li class="fragment">すごくかっこいいエディタ</li>
+          <li class="fragment">Emacsよりも良いエディタ</li>
+        </ul>
       </section>
+
       <section>
-        <h2>話し合い</h2>
+        <h3>Vimってどんだけ速いの？</h3>
+        <p class="fragment">すごく速いんだよ。</p>
+      </section>
+
+      <section>
+        <h3>小枝って本当に速いの？</h3>
+        <p class="fragment">鬼速いよ。</p>
+      </section>
+
+      <section>
+        <h2>
+          ということで<br>
+          ライブコーディング
+        </h2>
+      </section>
+
+      <section>
+        <h3>どうしたら速くなるの？</h3>
+        <ul>
+          <li class="fragment">1ヶ月ぐらいVimだけ使ってみる</li>
+          <li class="fragment">emmet-vimを入れる</li>
+          <li class="fragment">surround.vimを入れる</li>
+          <li class="fragment">お酒を飲む</li>
+          <li class="fragment">easymotionを入れる</li>
+          <li class="fragment">clever-fを入れる</li>
+          <li class="fragment">おまけ: Uniteを使いこなす</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>どうしたら速くなるの？</h3>
+        <ul>
+          <li class="fragment">1ヶ月ぐらいVimだけ使ってみる</li>
+          <li class="fragment">emmet-vimを入れる</li>
+          <li class="fragment">surround.vimを入れる</li>
+          <li class="fragment">お酒を飲む</li>
+          <li class="fragment">easymotionを入れる</li>
+          <li class="fragment">clever-fを入れる</li>
+          <li class="fragment">おまけ: Uniteを使いこなす</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>
+          ありがとうございました。<br>
+          拍手ください！
+        </h2>
+      </section>
+
+      <section>
+        <h2>質問タイム★</h2>
       </section>
 
     </div>
@@ -300,7 +147,9 @@
         { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
         { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
         { src: 'plugin/zoom-js/zoom.js', async: true },
-        { src: 'plugin/notes/notes.js', async: true }
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
       ]
     });
   </script>
