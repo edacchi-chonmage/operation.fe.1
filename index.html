@@ -18,6 +18,37 @@
     <div class="slides">
 
       <section>
+        <h1>
+          Operation Fe<br>
+          Vol.1
+        </h1>
+        <p>
+          2015.07.14
+        </p>
+      </section>
+
+      <section>
+        <h2>
+          主催 兼 司会
+        </h2>
+        <h1>小枝</h1>
+      </section>
+
+      <section>
+        <h2>Operation Feってなんだ？</h2>
+      </section>
+
+      <section>
+        <h2>今日のアジェンダ</h2>
+        <ol>
+          <li>Vimを使った超高速HTML/CSSコーディング</li>
+          <li>framer.jsで作るマテリアルデザイン</li>
+          <li>プログラミング修行法</li>
+          <li>思考を妨げないコーディング</li>
+        </ol>
+      </section>
+
+      <section>
         <h2>
           Vimを使った超高速<br>
           HTML/CSSコーディング
@@ -33,6 +64,10 @@
             <td>小枝優駿</td>
           </tr>
           <tr class="fragment">
+            <th>ニックネーム</th>
+            <td>はだか、えだっち</td>
+          </tr>
+          <tr class="fragment">
             <th>所属</th>
             <td>株式会社ビズリーチ スタンバイ事業部</td>
           </tr>
@@ -44,8 +79,18 @@
             <th>最近の悩み</th>
             <td>体脂肪率（30%超え）</td>
           </tr>
+          <tr class="fragment">
+            <th>趣味</th>
+            <td>ゲーム（最近Diablo 3）</td>
+          </tr>
+          <tr class="fragment">
+            <th>特技</th>
+            <td>スケボー、筋肥大</td>
+          </tr>
         </table>
       </section>
+
+      <section data-background-image="images/koeda.jpg" data-background-size="auto 150%"></section>
 
       <section>
         <h3>今日やりたいこと</h3>
@@ -57,7 +102,7 @@
         </ol>
       </section>
 
-      <section>
+      <section data-background-image="images/vim.png" data-background-size="200px auto" data-background-position="center 5%">
         <h3>Vimって何？</h3>
         <ul>
           <li class="fragment">すごく使いづらいエディタ</li>
@@ -82,6 +127,7 @@
           ということで<br>
           ライブコーディング
         </h2>
+        <p class="fragment">5分でカルーセル作成</p>
       </section>
 
       <section>
@@ -98,27 +144,27 @@
       </section>
 
       <section>
-        <h3>どうしたら速くなるの？</h3>
-        <ul>
-          <li class="fragment">1ヶ月ぐらいVimだけ使ってみる</li>
-          <li class="fragment">emmet-vimを入れる</li>
-          <li class="fragment">surround.vimを入れる</li>
-          <li class="fragment">お酒を飲む</li>
-          <li class="fragment">easymotionを入れる</li>
-          <li class="fragment">clever-fを入れる</li>
-          <li class="fragment">おまけ: Uniteを使いこなす</li>
-        </ul>
+        <h2>質問タイム♥</h2>
       </section>
 
       <section>
         <h2>
-          ありがとうございました。<br>
-          拍手ください！
+          ありがとうございました。
         </h2>
-      </section>
-
-      <section>
-        <h2>質問タイム★</h2>
+        <p>
+          よろしければ、<br>
+          Facebook、Githubで繋ってください！<br>
+        </p>
+        <table>
+          <tr>
+            <th>Facebook</th>
+            <td><a href="https://www.facebook.com/masatoshi.koeda">masatoshi.koeda</a></td>
+          </tr>
+          <tr>
+            <th>Github</th>
+            <td><a href="https://github.com/thrbrd">thrbrd</a></td>
+          </tr>
+        </table>
       </section>
 
     </div>
@@ -148,8 +194,7 @@
         { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
         { src: 'plugin/zoom-js/zoom.js', async: true },
         { src: 'plugin/notes/notes.js', async: true },
-        { src: 'plugin/notes/notes.js', async: true },
-        { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        { src: 'plugin/notes/notes.js', async: true }
       ]
     });
   </script>
